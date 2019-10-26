@@ -15,15 +15,17 @@
     <preference name="Fullscreen" value="true" />
     <icon src="icons/icon.png" />
 
-
-    <preference name="phonegap-version" value="cli-8.1.1" />
-    <preference name="android-minSdkVersion" value="15" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="android-installLocation" value="auto" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 
+    <plugin name="cordova-android-support-gradle-release">
+        <variable name="ANDROID_SUPPORT_VERSION" value="23.+" />
+    </plugin>
     <plugin name="cordova-plugin-flashlight" />
 
     <plugin name="cordova-plugin-ionic-webview" />
