@@ -2,47 +2,105 @@
 <html>
 
 <head>
-  <title>شبكة المرشد v2</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="
-      width=device-width, 
-      height=device-height,
-      initial-scale=1,
-      maximum-scale=1,
-      minimum-scale=1, 
-      user-scalable=no, 
-      viewport-fit=cover,
-      target-densitydpi=device-dpi" />
-  <!-- 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> -->
-
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-  <!-- 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="theme-color" content="#4cd964" /> -->
-
-  <meta http-equiv="Content-Security-Policy" content="
-      default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:;
-      child-src * blob: ;
-      style-src * 'self' 'unsafe-inline';
-      script-src * 'self' 'unsafe-inline' 'unsafe-eval';
-      img-src * data:; 
-      media-src * 'self';" />
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>nas fm</title>
 </head>
 
-<body class="">
+<body>
+    <style type="text/css">
+        body {
+            background: #002D56;
+            text-align: center;
+        }
 
-  <audio controls>
-    <source src=" http://82.201.132.237:8000/;" type="audio/mpeg">
-  </audio>
+        img {
+            margin-top: 50px;
+            width: 80%;
+            height: auto;
+        }
 
+        .audiojs .scrubber {
+            background: none repeat scroll 0 0 #5A5A5A;
+            border-bottom: 0 none;
+            border-left: 0 none;
+            border-top: 1px solid #3F3F3F;
+            float: left;
+            height: 14px;
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+            width: 10px;
+            /* smaller width */
+        }
 
+        .audiojs {
+            width: 200px;
+        }
 
-  <script type="text/javascript" src="cordova.js"></script>
+        .audiojs .time {
+            display: none;
+        }
+
+        .player {
+            margin-top: 50px;
+        }
+
+        .socialicon {
+            width: 100px;
+            height: 100px;
+        }
+
+        .copyright {
+            color: #FFFFFF;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+    </style>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <img src="logo.png">
+    <br>
+    <center>
+        <div class="player">
+            <audio src="http://82.201.132.237:8000/;">
+        </div>
+        <br>
+        <div class="player">
+            <audio src="http://s2.voscast.com:12312/;">
+        </div>
+        <br>
+        <div class="player">
+            <audio src="http://stream.radiojar.com/t9h51xwr92quv">
+        </div>
+        <br>
+        <div class="player">
+            <audio src="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-araba?type=.mp3%2F">
+        </div>
+        <br>
+        <div class="player">
+            <audio src="http://19993.live.streamtheworld.com/ABU_DHABIAAC_SC">
+        </div>
+        <br>
+        <a href="#" onclick="window.open('https://twitter.com/vonfm2017', '_system');"><img class="socialicon"
+                src="fb.png"></a>
+        <a href="#" onclick="window.open('https://www.facebook.com/www.von.fm', '_system');"><img class="socialicon"
+                src="tw.png"></a>
+
+        <div class="copyright">
+            Powered by RojMedia
+        </div>
+    </center>
+
+    <script src="audio.min.js"></script>
+    <script>
+        audiojs.events.ready(function () {
+            audiojs.createAll({
+                autoplay: true,
+                autoload: "none"
+            });
+        });
+    </script>
 
 
 </body>
