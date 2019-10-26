@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.rojmedia.von" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.rojmedia.von" version="1.0.3" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
     <name>VON FM</name>
     <description>
         Listen to VON FM live from our official app - VON FM استمع مباشرة إلى راديو  
@@ -9,16 +11,21 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="Fullscreen" value="true" /> 
+    <preference name="Fullscreen" value="true" />
     <icon src="icons/icon.png" />
-      
-<plugin name="cordova-plugin-device" spec="1.1.2" source="npm" />
-<plugin name="cordova-plugin-media" spec="2.3.0" source="npm" />
-<plugin name="cordova-plugin-whitelist" spec="1.2.2" source="npm"  />
 
-<allow-navigation href="*" />
-	<allow-intent href="*" />
-<access origin="*" />	
-   
-   
+    <plugin name="cordova-plugin-flashlight" />
+
+    <plugin name="cordova-plugin-ionic-webview" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-media" />
+    <plugin name="cordova-plugin-whitelist" />
+
+
+
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+
+
 </widget>
