@@ -31,6 +31,8 @@
     <plugin name="cordova-plugin-device" />
     <plugin name="cordova-plugin-media" />
     <plugin name="cordova-plugin-whitelist" />
+	<plugin name="cordova-plugin-crosswalk-webview" spec="~2.4.0" />
+
 
 
 
